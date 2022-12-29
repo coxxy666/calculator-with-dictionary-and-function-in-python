@@ -26,16 +26,31 @@ operations =  {
 
 }
 
-num1 = int(input ( "What is the first number? : "))
+num1 = int(input ( "What is the first number? :\n "))
 
-num2 = int(input ( "What is the second  number? : "))
+num2 = int(input ( "What is the second  number? :\n "))
 
 for symbol in operations : 
   print(symbol)
 
-operation_symbol = input("pick an operation from the line above")
+operation_symbol = input("pick an operation from the line above : \n")
 
 cal_fun =  operations [operation_symbol]
 answer = cal_fun(num1, num2)
 
 print(f"{num1} {operation_symbol} {num2} = {answer}")
+
+ 
+operation_symbol = input("pick another operation")
+
+num3 = int(input ( "Another number? :\n "))
+
+cal_fun =  operations [operation_symbol]
+
+second_answer = cal_fun(answer, num3)
+
+print(f"{answer} {operation_symbol} {num3} = {second_answer}")
+
+
+
+
